@@ -1,8 +1,8 @@
 var OAuth = Meteor.npmRequire('wechat-oauth');
 
 var config = {
-  appId: 'wx24de4c25df5a24c8',
-  appSecret: '1476286b988ad4a5d05cb75ee1c0cc16',
+  appId: 'your_wx_appId',
+  appSecret: 'your_wx_appSecret',
   redirectURI: 'http://blicense.kyl.biz/oauth'
 }
 
