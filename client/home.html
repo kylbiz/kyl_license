@@ -1,0 +1,113 @@
+<template name="home">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+        
+        body {
+           background-color: #e7e4e4;   
+        }
+        .page {
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            display: box;
+            box-orient: horizontal;
+            box-pack: center;
+            box-align: center;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .page .container {
+            height: 100%;
+            width: 100%;
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            display: box;
+            box-orient: horizontal;
+            box-pack: center;
+            box-align: center;
+            max-height: 1080px;
+            max-width: 1080px;
+            text-align: center;
+            position: relative;
+            margin: 0 auto;
+        }
+        
+        .page .center {
+            min-height: 80%;
+            width: 100%;
+            position: relative;
+        }
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .title {
+            width: 50%;
+            max-width: 760px;
+            margin: 40px auto;
+        }
+        
+        .middle {
+            width: 28%;
+            max-width: 490px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            width: 50%;
+            max-width: 512px;
+            min-width: 180px;
+            margin: 40px auto;
+        }
+        
+        .hidden {
+            visibility: hidden;
+        }
+        
+        .top-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+  
+    <div class="page">
+        <div class="container">
+            <div class="center">
+                <div class="top-container">
+                    <div class="title">
+                        <img src="images/title_1.png" alt="">
+                    </div>
+                </div>
+                <div class="title hidden">
+                    <img src="images/title_1.png" alt="">
+                </div>
+                <div class="middle">
+                    <img src="images/center.png" alt="">
+                </div>
+                <div class="btn">
+                    <img  class="registration" src="images/btn_1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</template>  
+
+<template name="index">
+</template>    

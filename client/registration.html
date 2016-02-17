@@ -1,0 +1,241 @@
+<template name="registration">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+    
+    body {
+      background-color: #e7e4e4;
+    }
+    
+    .page {
+      display: -webkit-box;
+      -webkit-box-orient: horizontal;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      display: box;
+      box-orient: horizontal;
+      box-pack: center;
+      box-align: center;
+      height: 100%;
+      width: 100%;
+    }
+    
+    .page .container {
+      height: 100%;
+      width: 100%;
+      display: -webkit-box;
+      -webkit-box-orient: horizontal;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      display: box;
+      box-orient: horizontal;
+      box-pack: center;
+      box-align: center;
+      max-height: 1080px;
+      max-width: 1080px;
+      width: 88.65%;
+      text-align: center;
+      position: relative;
+      margin: 0 auto;
+    }
+    
+    .page .center {
+      min-height: 80%;
+      width: 100%;
+      position: relative;
+      background-color: #e3dfdf;
+      box-shadow: 1px 1px 1px 1px rgba(180, 180, 180, 0.5);
+      border-radius: 4px;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .middle {
+      margin: 0 auto;
+    }
+
+    .page .middle {
+      padding: 0;
+      padding-top: 1em;
+    }
+    
+    .btn {
+      width: 50%;
+      max-width: 512px;
+      min-width: 180px;
+      margin: 40px auto;
+      cursor: pointer;
+    }
+    
+    .btn-bg {
+      width: 58%;
+      margin: 0 auto;
+    }
+    
+    .top-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    
+    .control {
+      border-radius: 4px;
+    }
+    
+    .group {
+      margin: 0 auto;
+      display: inline-block;
+    }
+    
+    .make-row {
+      margin: 20px auto;
+      text-align: center;
+    }
+    
+    .group:after,
+    .group:before {
+      display: table;
+      content: "";
+    }
+    
+    .group:after {
+      clear: both;
+    }
+    
+    .group .control-label {
+      text-align: left;
+      float: left;
+      width: 80px;
+      margin-top: 7px;
+      font-size: 14px;
+      color: #908d8d;
+      padding-right: 10px;
+    }
+    
+    .group .olabel {
+      text-align: left;
+      float: left;
+      margin-top: 7px;
+      font-size: 14px;
+      color: #908d8d;
+    }
+    
+    .group .control {
+      float: left;
+    }    
+    .control {
+      width: 120px;
+      display: block;
+      height: 24px;
+      padding: 2px 6px;
+      font-size: 14px;
+      line-height: 1.428571429;
+      color: #555555;
+      vertical-align: middle;
+      background-color: #ffffff;
+      background-image: none;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+    .center .clear-margin-bottom {
+      margin-bottom: 0 !important;
+    }
+    .center .clear-margin-top {
+      margin-top: 0 !important;
+    }    
+    .hidden {
+      visibility: hidden;
+    }
+
+
+  </style>
+  <div class="page">
+    <div class="container">
+      <div class="center">
+        <div class="middle">
+          <div class="make-row">
+            <div class="group">
+              <div class="control-label">公司行业</div>
+              <select name="businessType" id="businessType" class="control">
+                {{#each typeLists}}
+                  <option value="{{name}}" data-typename="{{typeName}}" >{{name}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </div>
+          <div class="make-row clear-margin-bottom">
+            <div class="group">
+              <div class="control-label">公司名称</div>
+              <input type="text" class="control companyName">
+            </div>
+          </div>
+          <div class="make-row clear-margin-top">
+            <div class="group">
+              <div class="control-label hidden-xs">&nbsp;&nbsp;&nbsp;</div>
+              {{# if typeNameL}}
+                <div class="olabel">{{typeNameL}}有限公司</div>
+              {{/if}}
+            </div>
+          </div>
+          <div class="make-row">
+            <div class="group">
+              <div class="control-label">营业期限</div>
+              <select type="text" class="control businessTerm">
+                <option value="1年">1年</option>
+                <option value="1万年">1万年</option>
+                <option value="1光年">1光年</option>
+              </select>
+            </div>
+          </div>
+          <div class="make-row">
+            <div class="group">
+              <div class="control-label">法定代表人</div>
+              <input type="text" class="control legalPerson">
+            </div>
+          </div>
+          <div class="make-row">
+            <div class="group">
+              <div class="control-label">注册资本</div>
+              <select type="text" class="control businessMoney">
+                <option value="8万">8万</option>
+                <option value="8千万">8千万</option>
+                <option value="8亿">8亿</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+        <div class="btn">
+          <div class="btn-bg">
+            <img src="images/btn_2bg.png" alt="">
+          </div>
+          <img class="submit" src="images/btn_2.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<template name="getRegistrationL">
+
+</template>  
+

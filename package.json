@@ -1,0 +1,23 @@
+{
+  "name": "blicense",
+  "version": "0.0.1",
+  "description": "business licence game at wechat platform for KYL 2015",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zunkun/blicense.git"
+  },
+  "keywords": [
+    "business",
+    "license"
+  ],
+  "author": "zunkun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zunkun/blicense/issues"
+  },
+  "homepage": "https://github.com/zunkun/blicense#readme"
+}
